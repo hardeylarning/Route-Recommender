@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ohun èlò olúdámọ̀ràn nípa ọ̀nà</string>
+    <string name="todo">TODO</string>
+
+    <string name="admin">Ilé Alákoso</string>
+    <string name="auditorium">Gbọ̀ngàn</string>
+    <string name="engineering">Ilé onímọ̀-ẹ̀rọ</string>
+    <string name="entrepreneur">Oníṣòwò</string>
+    <string name="health_centre">Ilé-iṣẹ́ Ìlera</string>
+    <string name="health_scientist">Ilé Onímọ̀ ìjìnlẹ̀ ìlera</string>
+    <string name="library">Ilé ìyá-ìwé kàwé</string>
+    <string name="main_gate">Ibodè Àkọ́kọ́</string>
+    <string name="set">Ilé Ìmọ̀-ẹ̀rọ gbogbo nìṣe</string>
+    <string name="lecture_theatre">Ilé Ìtàgé ìkówé oníbejì</string>
+    <string name="multi_purpose">Ilé oníwúlò púpọ̀</string>
+    <string name="water">Ilé -iṣẹ́ omi</string>
+    <string name="urp">Ilé Ètò ìlú àti ìgbèríko</string>
+    <string name="pick_your_preferred_destination_from_here">
+        Yan ibi tí o fẹ́ láti ibí</string>
+    <string name="search_building">ṣe ìbéèrè ilé níbí</string>
+    <string name="change_language">Yí èdè padà</string>
+    <string name="exit">Jáde</string>
+    <string name="your_search_will_be_displayed_here">
+        Ìwádì rẹ yóò hàn níbí</string>
+    <string name="get_direction">Gba ìtọ́ sọ́nà</string>
+    <string name="description">Àpèjúwe</string>
+    <string name="no_search_found">kò sí èsì fún ìbéèrè rẹ</string>
+    <string name="home">Ilé</string>
+    <string name="search"> wá ilé</string>
+
+</resources>
