@@ -8,10 +8,10 @@
     tools:context=".SplashScreenActivity">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:layout_marginTop="100dp"
 
-        android:src="@drawable/uniosun200"
+        android:src="@drawable/map"
         android:id="@+id/uniosun"
         />
     <RelativeLayout

@@ -6,9 +6,11 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -19,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.rocktech.routerecommendersystem.model.Utils;
 
 public class DisplayActivity extends AppCompatActivity {
 
@@ -28,6 +31,7 @@ public class DisplayActivity extends AppCompatActivity {
     private TextView txtName, txtDescription;
     private Button getDirection;
     Language language;
+    private Utils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,8 @@ public class DisplayActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.app_name));
+
+        utils = new Utils(getApplicationContext());
         image = findViewById(R.id.image);
         txtName = findViewById(R.id.name);
         txtDescription = findViewById(R.id.description);
@@ -74,8 +80,22 @@ public class DisplayActivity extends AppCompatActivity {
                 break;
             case R.id.change_lang:
                 language.showChangeLanguageDialog();
+                language.loadLocale();
+
+                new Handler().postDelayed(() -> {
+
+                    Intent intentReturn = new Intent(this, MainActivity.class);
+                    startActivity(intentReturn);
+                }, 5000);
+              //  recreate();
+//                Intent intentReturn = new Intent(this, MainActivity.class);
+//                startActivity(intentReturn);
                 break;
             case R.id.search_menu:
+                this.getSharedPreferences("database", Context.MODE_PRIVATE).edit().remove("allItems").apply();
+                recreate();
+                language.loadLocale();
+                utils.initDatabase();
                 Intent intent1 = new Intent(this, SearchActivity.class);
                 startActivity(intent1);
                 break;

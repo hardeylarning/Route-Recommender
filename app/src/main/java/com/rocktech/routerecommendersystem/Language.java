@@ -26,10 +26,12 @@ public class Language {
             if (i == 0) {
                 setLocale("yo");
                 activity.recreate();
+                loadLocale();
             }
             else if (i == 1) {
                 setLocale("en");
                 activity.recreate();
+                loadLocale();
             }
             dialogInterface.dismiss();
         });
@@ -53,7 +55,10 @@ public class Language {
     public void loadLocale() {
         SharedPreferences preferences = activity.getSharedPreferences("Settings", Context.MODE_PRIVATE);
         String language = preferences.getString("my_lang","");
-        setLocale(language);
+        if (null != language)
+            setLocale(language);
+        else
+            setLocale("en");
     }
 
 }

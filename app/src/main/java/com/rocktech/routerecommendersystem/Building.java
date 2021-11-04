@@ -11,14 +11,6 @@ public class Building implements Parcelable {
     private double latitude;
     private double longitude;
 
-//    public Building(int id, int image_url, String name, double latitude, double longitude) {
-//        this.id = id;
-//        this.image_url = image_url;
-//        this.name = name;
-//        this.latitude = latitude;
-//        this.longitude = longitude;
-//    }
-
     public Building(int id, int image_url, String name, String description,
                     double latitude, double longitude) {
         this.id = id;

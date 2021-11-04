@@ -1,5 +1,6 @@
 package com.rocktech.routerecommendersystem.model;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
@@ -7,6 +8,7 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.rocktech.routerecommendersystem.Building;
+import com.rocktech.routerecommendersystem.Language;
 import com.rocktech.routerecommendersystem.R;
 
 import java.lang.reflect.Type;
@@ -17,9 +19,17 @@ public class Utils {
     private static final String TAG = "Utils";
     public static final String DATABASE_NAME = "database";
     private final Context context;
+    private Activity activity;
+    Language language;
+
 
     public Utils(Context context) {
         this.context = context;
+    }
+
+    public Utils(Context context, Activity activity) {
+        this.context = context;
+        this.activity = activity;
     }
 
     private void initAllItems() {
@@ -31,32 +41,31 @@ public class Utils {
 
         List<Building> buildings = new ArrayList<>();
 
-        buildings.add(new Building(1, R.drawable.admin, context.
-                getResources().getString(R.string.admin), "description",7.7615777,4.53122));
+        buildings.add(new Building(1, R.drawable.admin, context.getResources().getString(R.string.admin), context.getResources().getString(R.string.admin_desc),7.761708,4.6014596));
         buildings.add(new Building(2, R.drawable.auditorium, context.getResources().
-                getString(R.string.auditorium), "description",7.7628282,4.5299585 ));
+                getString(R.string.auditorium), context.getResources().getString(R.string.auditorium_desc),7.762993,4.5999549 ));
         buildings.add(new Building(3, R.drawable.engineering, context.getResources().
-                getString(R.string.engineering), "description",7.7589025,4.5319887));
+                getString(R.string.engineering), context.getResources().getString(R.string.engineering_desc),7.7590357,4.6019182));
         buildings.add(new Building(4, R.drawable.entrepreneur, context.getResources().
-                getString(R.string.entrepreneur), "description",7.7616921,4.5336781));
+                getString(R.string.entrepreneur), context.getResources().getString(R.string.entrepreneur_desc),7.7628716,4.5964974));
         buildings.add(new Building(5, R.drawable.gate, context.getResources().
-                getString(R.string.main_gate), "description",7.7674823,4.5329037));
+                getString(R.string.main_gate), context.getResources().getString(R.string.main_gate_desc),7.7675821,4.6029815));
         buildings.add(new Building(6, R.drawable.health_centre, context.getResources().
-                getString(R.string.health_centre), "description",7.7616921,4.532392));
+                getString(R.string.health_centre), context.getResources().getString(R.string.health_centre_desc),7.7648985,4.6011351));
         buildings.add(new Building(7, R.drawable.health_scientist, context.getResources().
-                getString(R.string.health_scientist), "description",7.7561739,4.5342213));
+                getString(R.string.health_scientist), context.getResources().getString(R.string.health_scientist_desc),7.7567254,4.6044771));
         buildings.add(new Building(8, R.drawable.library, context.getResources().
-                getString(R.string.library), "description",7.7612279,4.5339493));
+                getString(R.string.library), context.getResources().getString(R.string.library_desc),7.7612459,4.6040279));
         buildings.add(new Building(9, R.drawable.multi_purpose_complex, context.getResources().
-                getString(R.string.multi_purpose), "description",7.7585265,4.5336781));
+                getString(R.string.multi_purpose), context.getResources().getString(R.string.multi_purpose_desc),7.7585322,4.6037187));
         buildings.add(new Building(10, R.drawable.set_pathway, context.getResources().
-                getString(R.string.set), "description",7.7611055,4.5318274 ));
+                getString(R.string.set), context.getResources().getString(R.string.set_desc),7.7609505,4.6017573 ));
         buildings.add(new Building(11, R.drawable.tetfund, context.getResources().
-                getString(R.string.lecture_theatre), "description",7.7616921,4.532392));
+                getString(R.string.lecture_theatre), context.getResources().getString(R.string.lecture_theatre_desc),7.7587524,4.6031735));
         buildings.add(new Building(12, R.drawable.urp, context.getResources().
-                getString(R.string.urp), "description",7.7443465,4.5078785));
+                getString(R.string.urp), context.getResources().getString(R.string.urp_desc),7.7564098,4.5990049));
         buildings.add(new Building(13, R.drawable.water, context.getResources().
-                getString(R.string.water), "description",7.7616921,4.532392));
+                getString(R.string.water), context.getResources().getString(R.string.water_desc),7.7628716,4.5964974));
 
         String finalList = gson.toJson(buildings);
         editor.putString("allItems", finalList);

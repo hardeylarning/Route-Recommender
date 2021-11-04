@@ -87,6 +87,8 @@ public class DetailActivity extends FragmentActivity implements OnMapReadyCallba
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(getLatLong, 15));
     }
 
+
+
     private void getIntentData() {
         if (getIntent().hasExtra("latitude"))
         {

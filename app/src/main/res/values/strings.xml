@@ -2,12 +2,27 @@
     <string name="app_name">Route Recommender System</string>
     <string name="todo">TODO</string>
 
+<!--    Description -->
+    <string name="admin_desc">Administrative building of Osun state university, Osogbo, it is located directly from the main gate of the main campus. It is also called the senate building, it is named after Prof. Peter Okebukola, who is the pioneer Pro-Chancellor and Chairman of Governing Council of the institution.</string>
+    <string name="auditorium_desc">It is the biggest Auditorium in the institution, it is named after former Governor Price Olagusoye Oyinlola. It is located along the Enterpreneur building</string>
+    <string name="engineering_desc">This is the faculty of engineering and it is named after the immediate Governor of Osun state, Enrg. Rauf Aregbesola. It is the biggest building in Osun state university.</string>
+    <string name="entrepreneur_desc">The building is function of entreneurship. Training and workshop </string>
+    <string name="health_centre_desc">This is the health centre of the institution. It also includes the pharmacy</string>
+    <string name="health_scientist_desc">Health Scientist</string>
+    <string name="library_desc">Central library is where educational books are kept. And it can be found along tetfund building in the main campus of uniosun. It is named after Prof. Sola Akinrinde, the first Vice Chancellor of the university and was completed on November 2016. It is a two storey building with different units/sections.</string>
+    <string name="main_gate_desc">This is the main entrance of the Institution. It is located along Ibokun way, Oke-baale, Osogbo Osun State</string>
+    <string name="set_desc">this building is located behind the admin building in the campus. Its name is the acronym for SCIENCE ENGINEERING AND TECHNOLOGY</string>
+    <string name="lecture_theatre_desc">This is the first lecture theatre in the institution. It is completed in the year 2016. It is popularly called the twins lecture theatre.</string>
+    <string name="multi_purpose_desc">this is one of the latest building in the institution.</string>
+    <string name="water_desc">This is school water factory closer to entrepreneur building</string>
+    <string name="urp_desc">This is the Faculty of Environmental sciences. It is popularly known as URP building. Is almost the last building inside the campus.</string>
+
     <string name="admin">Admin</string>
     <string name="auditorium">Auditorium</string>
     <string name="engineering">Engineering</string>
     <string name="entrepreneur">Entrepreneur</string>
     <string name="health_centre">Health Centre</string>
-    <string name="health_scientist">Health Scientist</string>
+    <string name="health_scientist">Health Sciences</string>
     <string name="library">Library</string>
     <string name="main_gate">Main Gate</string>
     <string name="set">SET</string>
@@ -26,5 +41,8 @@
     <string name="no_search_found">No Search Found</string>
     <string name="home">Home</string>
     <string name="search">Search</string>
+    <string name="exit_title">Are you sure you want to exit?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
 
 </resources>

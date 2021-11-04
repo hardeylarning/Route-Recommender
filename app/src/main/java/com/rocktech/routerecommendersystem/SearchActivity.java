@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -42,7 +43,8 @@ public class SearchActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.app_name));
 
-        utils = new Utils(getApplicationContext());
+        utils = new Utils(getApplicationContext(), this);
+        this.getSharedPreferences("database", Context.MODE_PRIVATE).edit().remove("allItems").apply();
         utils.initDatabase();
 
         recycler = findViewById(R.id.searchReport);
@@ -53,6 +55,10 @@ public class SearchActivity extends AppCompatActivity {
         recycler.setLayoutManager(new LinearLayoutManager(this));
 
         searchButton.setOnClickListener(view -> {
+            utils = new Utils(getApplicationContext(), this);
+            this.getSharedPreferences("database", Context.MODE_PRIVATE).edit().remove("allItems").apply();
+            language.loadLocale();
+            utils.initDatabase();
             String text = searchText.getText().toString();
             buildings = utils.searchForItem(text);
             if (buildings.size() < 1)
@@ -89,6 +95,7 @@ public class SearchActivity extends AppCompatActivity {
                 break;
             case R.id.change_lang:
                 language.showChangeLanguageDialog();
+                recreate();
                 break;
             case R.id.search_menu:
                 Toast.makeText(this, "Already here",

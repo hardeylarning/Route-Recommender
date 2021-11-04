@@ -3,6 +3,22 @@
     <string name="app_name">Ohun èlò olúdámọ̀ràn nípa ọ̀nà</string>
     <string name="todo">TODO</string>
 
+<!--    Description -->
+
+    <string name="admin_desc">Ilé yìí ni a tún ń pè ní ilé ìgbìmọ̀ aṣòfin. Wọ́n dárúkọ rẹ̀ lẹ́yìn Ọ̀jọ̀gbọ́n Peter Okebukola tí ó jẹ́ aṣáájú-ọ̀nà Pro-Chancellor àti Alaga Igbimọ Alakoso ti igbekalẹ naa</string>
+    <string name="auditorium_desc">Eyi je gbongan nla ni yunifasiti ti won si n pe oruko re ni oruko Gomina tele tele, Omoba Olagunsoye Oyinlola. O ti wa ni be pẹlú Onisowo ile.</string>
+    <string name="engineering_desc">O jẹ awọn tobi ile ni uniosun, ati awọn ti o ti wa ni oniwa lẹhin Engr. Rauf Aregbesola</string>
+    <string name="entrepreneur_desc">Eyi ile ni awọn entrepreneur ile ati awọn ti o jẹ fun ikẹkọ ati onifioroweoro. O ti wa ni be pẹlú awọn gboôgan ile.</string>
+    <string name="health_centre_desc">Eyi ni ile-iṣẹ ilera ti ile-ẹkọ ati pe o tun pẹlu ile elegbogi.</string>
+    <string name="health_scientist_desc">Eyi ni kọlẹji ti imọ-jinlẹ ilera.</string>
+    <string name="library_desc">Eyi ni ile-ikawe yunifasiti ati pe orukọ rẹ ni Sola Akinrinade ti o jẹ aṣáájú-ọnà igbakeji kansila ti yunifasiti ti o pari ni Oṣu kọkanla ọdun 2016. o jẹ ile oloja meji ti o ni awọn ipin/apakan</string>
+    <string name="main_gate_desc">Eyi ni ẹnu-ọna akọkọ ti yunifasiti ati pe o wa ni ọna Ibokun, Oke-baale Osogbo Osun State</string>
+    <string name="set_desc">Eyi ile ti wa ni be sile awọn admin ile ni ogba. Orukọ rẹ ni adape fun SCIENCE ENGINEERING AND TECHNOLOGY</string>
+    <string name="lecture_theatre_desc">Eyi ni akọkọ ikowe itage ni igbekalẹ. Odun 2016 ti pari e, won si n pe ni ibeji itage ikowe</string>
+    <string name="multi_purpose_desc">Eyi jẹ ọkan ninu awọn titun ile ni igbekalẹ</string>
+    <string name="water_desc">Ile ise omi</string>
+    <string name="urp_desc">Eyi ni ẹka ti imọ-jinlẹ ayika ati pe o gbajumo pe ni ile URP. O ti wa ni fere awọn ti o kẹhin ile ni ogba.</string>
+
     <string name="admin">Ilé Alákoso</string>
     <string name="auditorium">Gbọ̀ngàn</string>
     <string name="engineering">Ilé onímọ̀-ẹ̀rọ</string>
@@ -14,10 +30,10 @@
     <string name="set">Ilé Ìmọ̀-ẹ̀rọ gbogbo nìṣe</string>
     <string name="lecture_theatre">Ilé Ìtàgé ìkówé oníbejì</string>
     <string name="multi_purpose">Ilé oníwúlò púpọ̀</string>
-    <string name="water">Ilé -iṣẹ́ omi</string>
+    <string name="water">Ilé-iṣẹ́ omi</string>
     <string name="urp">Ilé Ètò ìlú àti ìgbèríko</string>
     <string name="pick_your_preferred_destination_from_here">
-        Yan ibi tí o fẹ́ láti ibí</string>
+        Yan ibi tí ofẹ́ lo láti ibí</string>
     <string name="search_building">ṣe ìbéèrè ilé níbí</string>
     <string name="change_language">Yí èdè padà</string>
     <string name="exit">Jáde</string>
@@ -28,5 +44,9 @@
     <string name="no_search_found">kò sí èsì fún ìbéèrè rẹ</string>
     <string name="home">Ilé</string>
     <string name="search"> wá ilé</string>
+
+    <string name="yes">bẹẹni</string>
+    <string name="no">rárá</string>
+    <string name="exit_title">Ṣé o dá ọ lójú pé o fẹ́ jáde?</string>
 
 </resources>
