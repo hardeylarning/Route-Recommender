@@ -45,7 +45,7 @@ public class DisplayActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.app_name));
 
-        utils = new Utils(getApplicationContext());
+        utils = new Utils(getApplicationContext(), this);
         image = findViewById(R.id.image);
         txtName = findViewById(R.id.name);
         txtDescription = findViewById(R.id.description);
@@ -87,17 +87,13 @@ public class DisplayActivity extends AppCompatActivity {
                     Intent intentReturn = new Intent(this, MainActivity.class);
                     startActivity(intentReturn);
                 }, 5000);
-              //  recreate();
-//                Intent intentReturn = new Intent(this, MainActivity.class);
-//                startActivity(intentReturn);
                 break;
             case R.id.search_menu:
                 this.getSharedPreferences("database", Context.MODE_PRIVATE).edit().remove("allItems").apply();
-                recreate();
                 language.loadLocale();
                 utils.initDatabase();
-                Intent intent1 = new Intent(this, SearchActivity.class);
-                startActivity(intent1);
+                Intent intentSearch = new Intent(this, SearchActivity.class);
+                startActivity(intentSearch);
                 break;
             case R.id.exit_menu:
                 exitApp();

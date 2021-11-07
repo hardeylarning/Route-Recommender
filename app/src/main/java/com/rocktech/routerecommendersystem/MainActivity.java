@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.app_name));
-        utils = new Utils(getApplicationContext());
+        utils = new Utils(getApplicationContext(), this);
 
         recycler = findViewById(R.id.recycler);
         buildings = new ArrayList<>();
@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.search_menu:
                 this.getSharedPreferences("database", Context.MODE_PRIVATE).edit().remove("allItems").apply();
-               // recreate();
                 language.loadLocale();
                 utils.initDatabase();
                 Intent intent = new Intent(MainActivity.this, SearchActivity.class);

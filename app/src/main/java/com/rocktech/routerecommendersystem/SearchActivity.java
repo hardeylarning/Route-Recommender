@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -43,9 +44,9 @@ public class SearchActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.app_name));
 
-        utils = new Utils(getApplicationContext(), this);
-        this.getSharedPreferences("database", Context.MODE_PRIVATE).edit().remove("allItems").apply();
-        utils.initDatabase();
+//        utils = new Utils(getApplicationContext(), this);
+//        this.getSharedPreferences("database", Context.MODE_PRIVATE).edit().remove("allItems").apply();
+//        utils.initDatabase();
 
         recycler = findViewById(R.id.searchReport);
         notFound = findViewById(R.id.notFound);
@@ -95,7 +96,12 @@ public class SearchActivity extends AppCompatActivity {
                 break;
             case R.id.change_lang:
                 language.showChangeLanguageDialog();
-                recreate();
+                language.loadLocale();
+                new Handler().postDelayed(() -> {
+
+                    Intent intentReturn = new Intent(this, MainActivity.class);
+                    startActivity(intentReturn);
+                }, 5000);
                 break;
             case R.id.search_menu:
                 Toast.makeText(this, "Already here",
